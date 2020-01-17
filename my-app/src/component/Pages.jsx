@@ -44,44 +44,44 @@ export class Pages extends React.Component{
                 }
                 </div>
                 <div id = 'Menu'>
-                    <div><button onClick={this.OnEyeClick = this.OnEyeClick.bind(this)}>EYE</button></div>
-                    <div><button onClick={this.OnSetClick = this.OnSetClick.bind(this)}>SET.</button></div>
-                    <div><button onClick={this.OnMpClick = this.OnMpClick.bind(this)}>MP</button></div>
+                    <div style={{display:'flex',margin:'auto'}} onClick={this.OnSetClick = this.OnSetClick.bind(this)}><SettingsButton /></div>
+                    <div style={{display:'flex',margin:'auto 30px'}} onClick={this.OnEyeClick = this.OnEyeClick.bind(this)}><EyeButton /></div>
+                    <div style={{display:'flex',margin:'auto'}} onClick={this.OnMpClick = this.OnMpClick.bind(this)}><MyProfileButton /></div>
                 </div>
             </div>
         )
     }
 }
-
-
-
-
-
-
-
-
-
-/*
-
-ВАРИАНТ 1
-
-export class Pages extends React.Component{
-    constructor(){
-        super()
-
-        this.state = {
-            page: 0
-        }
-    }
-
+class EyeButton extends React.Component{
     render(){
         return(
-            <div>
-                <EyeTraningPage />
-                <SettingsPage />
-                <MyProfilePage />
+            <div class = "BigMenuButtom">
+                <img style={{margin: "20px 18px"}} src="/Images/MenuButtons/EyeIcon.png" />
             </div>
         )
     }
 }
-*/
+class SettingsButton extends React.Component{
+    render(){
+        return(
+            <div class = "SmallMenuButtom">
+                <img style={{margin: "12px 10px"}} src="/Images/MenuButtons/EyeIcon.png" />
+            </div>
+        )
+    }
+}
+class MyProfileButton extends React.Component{
+    render(){
+        return(
+            <div class = "SmallMenuButtom">
+                <img style={{margin: "12px 10px"}} src="/Images/MenuButtons/EyeIcon.png" />
+            </div>
+        )
+    }
+}
+
+
+
+
+
+
