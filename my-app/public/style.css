@@ -12,6 +12,13 @@
     font-style: normal;
     src: url(./SFUIDISPLAY-LIGHT.TTF);
 }
+:root{
+    --black: #1f1f1f;
+    --gray: #333336;
+    --lightGray: #6b6b6f ;
+    --transparent: rgb( 255,255,255, 0);
+    --white: #fff;
+}
 
 #button{
     display: flex;
@@ -19,7 +26,7 @@
     margin: auto;
     height: 40px;
     width: 320px;
-    background-color: #333336;
+    background-color: var(--gray);
     border-radius: 10px; 
 }
 #button1{
@@ -29,7 +36,7 @@
     margin: auto;
     height: 32px;
     width: 156px;
-    background-color: #6b6b6f;
+    background-color: var(--lightGray);
     border-radius: 12px;
     color: white; 
 }
@@ -51,7 +58,7 @@ body{
     display: flex;
     flex-direction: column;
     color: white;
-    background-color: #1f1f1f;
+    background-color: var(--black);
 
 }
 
@@ -66,7 +73,7 @@ body{
     margin: auto;
     height: 40px;
     width: 322px;
-    background-color: #333336;
+    background-color: var(--gray);
     border-radius: 15px;
 
 }
@@ -82,16 +89,204 @@ body{
 }
 #Content{
     flex-grow: 1;
-    background-color: #1f1f1f;
+    background-color: var(--black);
 }
 #Area{
     height: 720px;
     display: flex;
     flex-direction: column;
-    background-color: #1f1f1f;
+    background-color: var(--black);
 
 }
+#MainButtonStart{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 155px;
+    width: 155px;
+    background-color: var(--gray);
+    border-radius: 100px;
+}
+
+.ButtonCircle1{
+    width: 30px;
+    height: 30px;
+    
+    margin: 0px 0px 15px 0px;
+    
+
+    border-top: 10px solid var(--lightGray);
+    border-right: 0px solid var(--lightGray);
+    border-bottom: 0px solid var(--lightGray);
+    border-left: 10px solid var(--lightGray);
+    border-radius: 50px 0px 0px 0px;
+    background-color: transparent;
+}
+.ButtonCircle2{
+    width: 30px;
+    height: 30px;
+    
+    margin: 15px 0px 0px 0px;
+    
+
+    border-top: 0px solid var(--lightGray);
+    border-right: 0px solid var(--lightGray);
+    border-bottom: 10px solid var(--lightGray);
+    border-left: 10px solid var(--lightGray);
+    border-radius: 0px 0px 0px 50px;
+    background-color: transparent;
+}
+.ButtonCircle3{
+    width: 30px;
+    height: 30px;
+    
+    margin: 0px 0px 15px 0px;
+    
+
+
+    border-top: 10px solid var(--lightGray);
+    border-right: 10px solid var(--lightGray);
+    border-bottom: 0px solid var(--lightGray);
+    border-left: 0px solid var(--lightGray);
+    border-radius: 0px 50px 0px 0px;
+    background-color: transparent;
+}
+.ButtonCircle4{
+
+    width: 30px;
+    height: 30px;
+    
+    margin: 15px 0px 0px 0px;
+    
+      
+    border-top: 0px solid var(--lightGray);
+    border-right: 10px solid var(--lightGray);
+    border-bottom: 10px solid var(--lightGray);
+    border-left: 0px solid var(--lightGray);
+    border-radius: 0px 0px 50px 0px;
+    background-color: transparent;
+}
+.ButtonCircles1_1{
+    width: 9px;
+    height: 9px;
+    margin: 0px 0px 0px 0px;
+    position: relative;
+    left: 25px;
+    bottom: 10px;
+
+
+    border-top: 1px solid var(--lightGray);
+    border-right: 1px solid var(--lightGray);
+    border-bottom: 0px solid var(--lightGray);
+    border-left: 0px solid var(--lightGray);
+    border-radius: 100px;
+    background-color: var(--lightGray);
+}
+.ButtonCircles1_2{
+    width: 9px;
+    height: 9px;
+    position: relative;
+    top: 15px;
+    right: 10px;
+    
+
+    border-top: 1px solid var(--lightGray);
+    border-right: 1px solid var(--lightGray);
+    border-bottom: 0px solid var(--lightGray);
+    border-left: 0px solid var(--lightGray);
+    border-radius: 100px;
+    background-color: var(--lightGray);
+}
+.ButtonCircles2_1{
+    width: 9px;
+    height: 9px;
+    position: relative;
+    bottom: 5px;
+    right: 10px;
+
+    border-top: 1px solid var(--lightGray);
+    border-right: 1px solid var(--lightGray);
+    border-bottom: 0px solid var(--lightGray);
+    border-left: 0px solid var(--lightGray);
+    border-radius: 100px;
+    background-color: var(--lightGray);
+}
+.ButtonCircles2_2{
+    width: 9px;
+    height: 9px;
+    position: relative;
+    top: 20px;
+    left: 25px;
+
+    border-top: 1px solid var(--lightGray);
+    border-right: 1px solid var(--lightGray);
+    border-bottom: 0px solid var(--lightGray);
+    border-left: 0px solid var(--lightGray);
+    border-radius: 100px;
+    background-color: var(--lightGray);
+}
+.ButtonCircles3_1{
+    width: 9px;
+    height: 9px;
+    margin: 0px 0px 0px 0px;
+    position: relative;
+    right: 5px;
+    bottom: 10px;
+
+
+    border-top: 1px solid var(--lightGray);
+    border-right: 1px solid var(--lightGray);
+    border-bottom: 0px solid var(--lightGray);
+    border-left: 0px solid var(--lightGray);
+    border-radius: 100px;
+    background-color: var(--lightGray);
+}
+.ButtonCircles3_2{
+    width: 9px;
+    height: 9px;
+    position: relative;
+    top: 15px;
+    left: 30px;
+    
+
+    border-top: 1px solid var(--lightGray);
+    border-right: 1px solid var(--lightGray);
+    border-bottom: 0px solid var(--lightGray);
+    border-left: 0px solid var(--lightGray);
+    border-radius: 100px;
+    background-color: var(--lightGray);
+}
+.ButtonCircles4_1{
+    width: 9px;
+    height: 9px;
+    position: relative;
+    top: 30px;
+    right: 5px;
+
+    border-top: 1px solid var(--lightGray);
+    border-right: 1px solid var(--lightGray);
+    border-bottom: 0px solid var(--lightGray);
+    border-left: 0px solid var(--lightGray);
+    border-radius: 100px;
+    background-color: var(--lightGray);
+}
+.ButtonCircles4_2{
+    width: 9px;
+    height: 9px;
+    position: relative;
+    bottom: 15px;
+    left: 30px;
+
+    border-top: 1px solid var(--lightGray);
+    border-right: 1px solid var(--lightGray);
+    border-bottom: 0px solid var(--lightGray);
+    border-left: 0px solid var(--lightGray);
+    border-radius: 100px;
+    background-color: var(--lightGray);
+}
 .BigMenuButtom{
+    display: flex;
     height: 62px;
     width: 62px;
     background-image: -webkit-linear-gradient( 90deg, rgb(61,209,242) 0%, rgb(61,139,242) 100%);
@@ -100,7 +295,7 @@ body{
 .SmallMenuButtom{
     height: 45px;
     width: 45px;
-    background-color: #333336;
+    background-color: var(--gray);
     border-radius: 100px;
 }
-  
+
