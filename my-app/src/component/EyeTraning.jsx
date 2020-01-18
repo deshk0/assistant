@@ -6,10 +6,16 @@ export class EyeTraningPage extends React.Component {
         super()
 
         this.state = {
-            status: 'start' ///////!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            status: 'start', ///////!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            mode: 'warm up'
         }
         
         this.onClick = this.onClick.bind(this)
+        this.goBack = this.goBack.bind(this)
+        this.changeMode1 = this.changeMode1.bind(this)
+        this.changeMode2 = this.changeMode2.bind(this)
+
+
     }
 
     onClick(){
@@ -17,10 +23,35 @@ export class EyeTraningPage extends React.Component {
             status: 'process'
         })
     }
+    goBack(){
+        this.setState({
+            status: 'start'
+        })
+    }
+    changeMode1(){
+        this.setState({
+            mode: 'warm up'
+        })
+    }
+    changeMode2(){
+        this.setState({
+            mode: 'recovery'
+        })
+    }
     render(){
         return(
+            <div>
+            {
+                this.state.status ==='start' ? 
+                <EyeTraningStart onButtonClick = {this.onClick} onChangeClick1 = {this.changeMode1} onChangeClick2 = {this.changeMode2}/> 
+                :
+                this.state.mode === 'warm up' ? <Timer onButtonClick = {this.goBack} /> 
+                :
+                this.state.mode === 'recovery' ? 'Работает' 
+                :'penis' 
+             } 
             
-            <div>{this.state.status ==='start' ? <EyeTraningStart onButtonClick = {this.onClick} /> : <Timer /> }</div>
+            </div>
         )
     }
 }
@@ -30,7 +61,9 @@ class EyeTraningStart extends React.Component {
         super()
 
         this.state = {
-            click: true
+            click: true,
+            check1: true,
+            check2: false
         }
     }
     onClick(){
@@ -39,14 +72,40 @@ class EyeTraningStart extends React.Component {
         })
         this.props.onButtonClick();
     }
+    changeMode1(){
+        this.setState({
+            check1: true,
+            check2: false
+        })
+        this.props.onChangeClick1();
+    }
+    changeMode2(){
+        this.setState({
+            check2: true,
+            check1: false
+        })
+        this.props.onChangeClick2();
+    }
 
     render(){
         return(
             <div class='EyeTraningPage'>
                 <div style={{margin:'35px auto 22px auto'}}>Тренировка глаз</div>
                 <div class='EyeTraningPage-changing'>
-                    <button id='button1' >Разминка</button>
-                    <button id='button2' >Восстановление</button>
+                    <div 
+                    id='button1' 
+                    onClick={this.changeMode1 = this.changeMode1.bind(this)}
+                    style={{backgroundColor:`${ this.state.check1 === true && this.state.check2 === false ? "#6b6b6f" : "#333336" }`}}
+                    >
+                        <div style={{margin:'auto 0'}}>Разминка</div>
+                    </div>
+                    <div 
+                    id='button2'
+                    onClick={this.changeMode2 = this.changeMode2.bind(this)}
+                    style={{backgroundColor:`${ this.state.check2 === true && this.state.check1 === false ? "#6b6b6f" : "#333336" }`}}
+                    >
+                        <div style={{margin:'auto 0'}}>Восстановление</div>
+                    </div>
                 </div>
                 <div class='EyeTraningPage-trainigsToday'>
                     <div>Тренировок сегодня:</div>
@@ -92,7 +151,8 @@ class Timer extends React.Component {
       
       this.state = { 
           seconds: 1,
-          screen: 1
+          screen: 2,
+          goBack: false
         };
     }
   
@@ -104,7 +164,7 @@ class Timer extends React.Component {
         if(this.state.seconds === 0 ){
             this.setState({
                 screen: this.state.screen + 1 ,
-                seconds: 2
+                seconds: 3
             })
         }
         if(this.state.seconds !== 0){
@@ -118,8 +178,15 @@ class Timer extends React.Component {
             screen: this.state.screen + 1
         })
     }
-    componentDidMount(){
+    Start(){
         this.interval = setInterval(() => this.tick(), 1000);
+    }
+    onClick(){
+        this.setState({
+            goBack: true
+        })
+        this.props.onButtonClick();
+
     }
   
     render() {
@@ -127,24 +194,52 @@ class Timer extends React.Component {
         <div class='EyeTraningPage'>
             <div style={{margin:'35px auto 22px auto',fontSize:'20px', fontWeight:'bold'}}>Тренировка глаз</div>
             <div style={{margin:'35px auto 55px auto',fontSize:'65px'}}>
-                {this.state.seconds === 0 && this.state.screen < 9? <audio src="./da.mp3" autoPlay></audio> : this.tick, this.state.seconds}
+                {this.state.screen === 0 || this.state.screen > 9? '' : this.state.seconds}
             </div>
-          {this.state.screen === 1? <ExerciseScreen1 /> :
-           this.state.screen === 2? <ExerciseScreen2 /> :
-           this.state.screen === 3? <ExerciseScreen3 /> :
-           this.state.screen === 4? <ExerciseScreen4 /> :
-           this.state.screen === 5? <ExerciseScreen5 /> :
-           this.state.screen === 6? <ExerciseScreen6 /> :
-           this.state.screen === 7? <ExerciseScreen7 /> :
-           this.state.screen === 8? <ExerciseScreen8 /> :
-           this.state.screen === 9? <ExerciseScreen9 /> :
-           'КОНЕЦ'}
-           {this.state.seconds === 0? <audio src="./2.m4a" autoPlay></audio> : ''}
+        {
+            this.state.screen === 0? <StartScreen onButtonClick={this.Start = this.Start.bind(this)} /> :
+            this.state.screen === 1? <ExerciseScreen1 /> :
+            this.state.screen === 2? <ExerciseScreen2 /> :
+            this.state.screen === 3? <ExerciseScreen3 /> :
+            this.state.screen === 4? <ExerciseScreen4 /> :
+            this.state.screen === 5? <ExerciseScreen5 /> :
+            this.state.screen === 6? <ExerciseScreen6 /> :
+            this.state.screen === 7? <ExerciseScreen7 /> :
+            this.state.screen === 8? <ExerciseScreen8 /> :
+            this.state.screen === 9? <ExerciseScreen9 /> :
+            
+            <FinalScreen onButtonClick = {this.onClick.bind(this)}/>
+        }
+           {this.state.seconds === 0? <audio src="./2.m4a" autoPlay></audio> : this.tick}
         </div>
       );
     }
   }
 
+class StartScreen extends React.Component{
+    constructor(){
+        super()
+
+        this.state ={
+            status: false
+        }
+    }
+    onClick(){
+        this.setState({
+            status: true
+        })
+        this.props.onButtonClick()
+    }
+
+    render(){
+        return(
+            <div onClick={this.onClick = this.onClick.bind(this)}>
+                Knopka
+
+            </div>
+        )
+    }
+}
 class ExerciseScreen1 extends React.Component{
 
     render(){
@@ -169,15 +264,17 @@ class ExerciseScreen2 extends React.Component{
 
     render(){
         return(
+            
             <div class='EyeTraningPage'>
                 <div style={{margin:'0px auto 0px auto',fontSize:'16px',fontWeight:'bold'}}>
                     Вверх-вниз
                 </div>
                 <div style={{margin:'0px auto'}}>
                     <div class="Eye">
-                        <div class="Pupil">
-                            <div class="PupilSmall"></div>
-                        </div>
+                        <div class="Eye1"></div>    
+                        <div class="Pupil"></div>                  
+                        <div class="PupilSmall"></div>
+                        <div class="Background"><img src='./gg.png' /></div>
                     </div>
                 </div>
                 <div style={{margin:'0px auto 0px auto',fontSize:'16px',fontWeight:'bold',textAlign:'center'}}>
@@ -185,6 +282,7 @@ class ExerciseScreen2 extends React.Component{
                     а мысленно продолжаем движение глаз за макушку головы и подбородок
                 </div>
             </div>
+            
         )
     }
 }
@@ -196,9 +294,9 @@ class ExerciseScreen3 extends React.Component{
                 <div style={{margin:'0px auto 0px auto',fontSize:'16px',fontWeight:'bold'}}>Расслабьтесь</div>
                 <div style={{margin:'0px auto'}}>
                     <div class="Eye">
-                        <div class="Pupil">
-                            <div class="PupilSmall"></div>
-                        </div>
+                        <div class="Eye1"></div>    
+                        <div class="Pupil"></div>
+                        <div class="PupilSmall"></div>
                     </div>
                 </div>
                 <div style={{margin:'0px auto 0px auto',fontSize:'16px',fontWeight:'bold', textAlign:'center'}}>
@@ -216,9 +314,9 @@ class ExerciseScreen4 extends React.Component{
                 <div style={{margin:'0px auto 0px auto',fontSize:'16px',fontWeight:'bold'}}>Влево-вправо</div>
                 <div style={{margin:'0px auto'}}>
                     <div class="Eye">
-                        <div class="Pupil">
-                            <div class="PupilSmall"></div>
-                        </div>
+                        <div class="Eye1"></div>    
+                        <div class="Pupil"></div>
+                        <div class="PupilSmall"></div>
                     </div>
                 </div>
                 <div style={{margin:'0px auto 0px auto',fontSize:'16px',fontWeight:'bold', textAlign:'center'}}>
@@ -236,9 +334,9 @@ class ExerciseScreen5 extends React.Component{
                 <div style={{margin:'0px auto 0px auto',fontSize:'16px',fontWeight:'bold'}}>Часики</div>
                 <div style={{margin:'0px auto'}}>
                     <div class="Eye">
-                        <div class="Pupil">
-                            <div class="PupilSmall"></div>
-                        </div>
+                        <div class="Eye1"></div>    
+                        <div class="Pupil"></div>
+                        <div class="PupilSmall"></div>
                     </div>
                 </div>
                 <div style={{margin:'0px auto 0px auto',fontSize:'16px',fontWeight:'bold', textAlign:'center'}}>
@@ -257,9 +355,9 @@ class ExerciseScreen6 extends React.Component{
                 <div style={{margin:'0px auto 0px auto',fontSize:'16px',fontWeight:'bold'}}>Круговые вращения</div>
                 <div style={{margin:'0px auto'}}>
                     <div class="Eye">
-                        <div class="Pupil">
-                            <div class="PupilSmall"></div>
-                        </div>
+                        <div class="Eye1"></div>    
+                        <div class="Pupil"></div>
+                        <div class="PupilSmall"></div>
                     </div>
                 </div>
                 <div style={{margin:'0px auto 0px auto',fontSize:'16px',fontWeight:'bold',textAlign:'center'}}>
@@ -275,15 +373,19 @@ class ExerciseScreen7 extends React.Component{
     render(){
         return(
             <div class='EyeTraningPage'>
-                <div style={{margin:'0px auto 0px auto',fontSize:'16px',fontWeight:'bold'}}>Расслабтесь</div>
+                <div style={{margin:'0px auto 0px auto',fontSize:'16px',fontWeight:'bold'}}>
+                    Восьмерка
+                </div>
                 <div style={{margin:'0px auto'}}>
                     <div class="Eye">
-                        <div class="Pupil">
-                            <div class="PupilSmall"></div>
-                        </div>
+                        <div class="Eye1"></div>    
+                        <div class="Pupil"></div>
+                        <div class="PupilSmall"></div>
                     </div>
                 </div>
-                <div style={{margin:'0px auto 0px auto',fontSize:'16px',fontWeight:'bold'}}>Закройте глаза до сигнала</div>
+                <div style={{margin:'0px auto 0px auto',fontSize:'16px',fontWeight:'bold',textAlign:'center'}}>
+                    Пусть витя текст напишет, мне в падлу
+                </div>
             </div>
         )
     }
@@ -293,15 +395,19 @@ class ExerciseScreen8 extends React.Component{
     render(){
         return(
             <div class='EyeTraningPage'>
-                <div style={{margin:'0px auto 0px auto',fontSize:'16px',fontWeight:'bold'}}>Расслабтесь</div>
+                <div style={{margin:'0px auto 0px auto',fontSize:'16px',fontWeight:'bold'}}>
+                    Ходики
+                </div>
                 <div style={{margin:'0px auto'}}>
                     <div class="Eye">
-                        <div class="Pupil">
-                            <div class="PupilSmall"></div>
-                        </div>
+                        <div class="Eye1"></div>    
+                        <div class="Pupil"></div>
+                        <div class="PupilSmall"></div>
                     </div>
                 </div>
-                <div style={{margin:'0px auto 0px auto',fontSize:'16px',fontWeight:'bold'}}>Закройте глаза до сигнала</div>
+                <div style={{margin:'0px auto 0px auto',fontSize:'16px',fontWeight:'bold',textAlign:'center'}}>
+                    Мне надоело писать текст припашу витю
+                </div>
             </div>
         )
     }
@@ -311,15 +417,60 @@ class ExerciseScreen9 extends React.Component{
     render(){
         return(
             <div class='EyeTraningPage'>
-                <div style={{margin:'0px auto 0px auto',fontSize:'16px',fontWeight:'bold'}}>Расслабтесь</div>
+                <div style={{margin:'0px auto 0px auto',fontSize:'16px',fontWeight:'bold'}}>
+                    Вблизи вдали
+                </div>
                 <div style={{margin:'0px auto'}}>
                     <div class="Eye">
-                        <div class="Pupil">
-                            <div class="PupilSmall"></div>
+                        <div class="Eye1"></div>    
+                        <div class="Pupil"></div>
+                        <div class="PupilSmall"></div>
+                    </div>
+                </div>
+                <div style={{margin:'0px auto 0px auto',fontSize:'16px',fontWeight:'bold',textAlign:'center'}}>
+                    Протяните вашу ладонь перед глазами и посмотрите на объект, который стоит далеко от вас,<br />
+                    теперь фокусируйте зрение с дальнего объекта на ладонь и наоборот
+                </div>
+            </div>
+        )
+    }
+}
+
+class FinalScreen extends React.Component{
+    constructor(){
+        super()
+        this.state = {
+            status: false
+        }
+    }
+
+    onClick(){
+        this.setState({
+            status: true
+        })
+        this.props.onButtonClick();
+    }
+
+
+    render(){
+        return(
+            <div class='EyeTraningPage'>
+                <div style={{margin:'40px auto 0px auto',fontSize:'18px',fontWeight:'bold'}}>
+                    Готово!
+                </div>
+                <div style={{margin:'0px auto 0px auto',fontSize:'16px',fontWeight:'normal'}}>
+                    Тренировка завершена
+                </div>
+                <div style={{margin:'0px auto'}}>
+                    <div class="AcceptCircle">
+                        <div class="AcceptCheck">
+                            <div class="AcceptCheck1"></div>
                         </div>
                     </div>
                 </div>
-                <div style={{margin:'0px auto 0px auto',fontSize:'16px',fontWeight:'bold'}}>Закройте глаза до сигнала</div>
+                <div style={{margin:'0px auto 0px auto',fontSize:'16px',fontWeight:'thin',textAlign:'center', width:'250px',height:'35px',backgroundColor:"#6b6b6f",borderRadius:'50px'}}>
+                    <div onClick={this.onClick = this.onClick.bind(this)} style={{margin:' 9px'}}>Вернуться на главную</div>
+                </div>
             </div>
         )
     }

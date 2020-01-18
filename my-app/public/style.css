@@ -38,7 +38,6 @@
     margin: auto;
     height: 32px;
     width: 156px;
-    background-color: var(--lightGray);
     border-radius: 12px;
     color: white; 
 }
@@ -49,9 +48,9 @@
     margin: auto;
     height: 32px;
     width: 156px;
-    background-color: transparent;
-    border-radius: 15px; 
+    border-radius: 12px; 
     color: white;
+
 }
 body{
     font-family: 'SFUIDISPLAY-REGULAR';
@@ -108,7 +107,7 @@ body{
     height: 155px;
     width: 155px;
     background-color: var(--gray);
-    border-radius: 100px;
+    border-radius: 65px;
 }
 
 .ButtonCircle1{
@@ -380,9 +379,16 @@ body{
 }
 
 .Eye{
+    margin: auto;
+    height: 180px;
+}
+.Eye1{
     width: 180px;
     height: 180px;
 
+    position: relative;
+    top: 0px;
+    left: 0px;
 
     border-top: 10px solid var(--white);
     border-right: 0px solid var(--white);
@@ -393,12 +399,18 @@ body{
     background-color: var(--white);
 }
 .Pupil{
-    width: 85px;
-    height: 85px;
+    width: 70px;
+    height: 70px;
 
     position: relative;
-    top: 35px;
-    left: 35px;
+    bottom: 139px;
+    left: 54px;
+
+    animation-name: eyeAnimationLeftRight;
+    animation-duration: 4s;
+    animation-iteration-count: 4;
+
+    transform: rotate(0deg);
 
 
     border-top: 10px solid var(--EyeGradient);
@@ -413,9 +425,12 @@ body{
     height: 18px;
 
     position: relative;
-    top: 23px;
-    left: 22px;
+    bottom: 193px;
+    left: 81px;
 
+    animation-name: smallEyeAnimationLeftRight;
+    animation-duration: 4s;
+    animation-iteration-count: 4;
 
     border-top: 10px solid var(--black);
     border-right: 0px solid var(--white);
@@ -425,3 +440,100 @@ body{
     background-color: var(--black);
 }
 
+.AcceptCircle{
+    width: 70px;
+    height: 70px;
+
+    margin: 65px 0;
+
+    border-top: 8px solid var(--white);
+    border-right: 8px solid var(--white);
+    border-bottom: 8px solid var(--white);
+    border-left: 8px solid var(--white);
+    border-radius: 100px;
+    background-color: var(--transparent);
+
+
+}
+.AcceptCheck{
+    width: 10px;
+    height: 38px;
+    position: relative;
+    top: 17px;
+    left: 37px;
+    transform: rotate(45deg);
+
+    background-color: var(--white);
+
+}
+.AcceptCheck1{
+    width: 24px;
+    height: 11px;
+    position: relative;
+    top: 30px;
+    right: 14px;
+
+    background-color: var(--white);
+
+}
+
+@keyframes eyeAnimationLeftRight{
+    0%{
+        margin-left: 0px;
+    }
+    25%{
+        margin-left: 70px;
+    }
+    50%{
+        margin-left: 0px;
+    }
+    75%{
+        margin-left: -70px;
+    }
+    100%{
+        margin-left: 0px;
+    }
+}
+@keyframes smallEyeAnimationLeftRight{
+    0%{
+        margin-left: 0px;
+    }
+    25%{
+        margin-left: 90px;
+    }
+    50%{
+        margin-left: 0px;
+    }
+    75%{
+        margin-left: -90px;
+    }
+    100%{
+        margin-left: 0px;
+    }
+}
+@keyframes eyeAnimationEight{
+    0%{
+        bottom: 187px;
+        left: 47px;
+    }
+    10%{
+        bottom: 155px;
+        left: 20px;
+    }
+    20%{
+        bottom: 145px;
+        left: 0px;
+    }
+
+    100%{
+        bottom: 147px;
+        left: 47px;
+    }
+}
+.Background{
+    width: 180px;
+    height: 80px;
+    position: relative;
+    bottom: 290px;
+    right: 112px;
+}
