@@ -150,8 +150,8 @@ class Timer extends React.Component {
       super(props);
       
       this.state = { 
-          seconds: 1,
-          screen: 2,
+          seconds: 15,
+          screen: 1,
           goBack: false
         };
     }
@@ -164,7 +164,7 @@ class Timer extends React.Component {
         if(this.state.seconds === 0 ){
             this.setState({
                 screen: this.state.screen + 1 ,
-                seconds: 3
+                seconds: 16
             })
         }
         if(this.state.seconds !== 0){
@@ -249,8 +249,22 @@ class ExerciseScreen1 extends React.Component{
                     Расслабьтесь
                 </div>
                 <div style={{margin:'0px auto 0px auto',fontSize:'16px',fontWeight:'bold'}}>
-                    <div class="ClosedEye2">
-                        <div class="ClosedEye3"></div>
+                    <div class="Eye">
+                        <div class="Eye1"></div> 
+                        <div class="Pupil"></div>
+                        <div class="PupilSmall"></div> 
+                        <div class="ClosedEye2" style={{
+                            animationName:'eyeAnimationClose',
+                            animationDuration:'0.1s',
+                            animationTimingFunction:'ease-in-out',
+                            animationIterationCount:'1',
+                            animationDelay:'1s',
+                            position:'relative',
+                            bottom:'284px',
+                            left:'111px',
+                            animationFillMode:'backwards'
+                        }}>
+                       </div> 
                     </div>
                 </div>
                 <div style={{margin:'0px auto 0px auto',fontSize:'16px',fontWeight:'bold'}}>
@@ -272,8 +286,16 @@ class ExerciseScreen2 extends React.Component{
                 <div style={{margin:'0px auto'}}>
                     <div class="Eye">
                         <div class="Eye1"></div>    
-                        <div class="Pupil"></div>                  
-                        <div class="PupilSmall"></div>
+                        <div class="Pupil" style={{
+                            animationName:'eyeAnimationUpDown',
+                            animationDuration:'4',
+                            animationIterationCount:'10',
+                        }} ></div>                  
+                        <div class="PupilSmall" style={{
+                            animationName:'smallEyeAnimationUpDown',
+                            animationDuration:'4',
+                            animationIterationCount:'10',
+                        }}></div>
                         <div class="Background"><img src='./gg.png' /></div>
                     </div>
                 </div>
@@ -295,8 +317,20 @@ class ExerciseScreen3 extends React.Component{
                 <div style={{margin:'0px auto'}}>
                     <div class="Eye">
                         <div class="Eye1"></div>    
-                        <div class="Pupil"></div>
+                        <div class="Pupil" style={{
+                            }}>
+                            </div>
                         <div class="PupilSmall"></div>
+                        <div class="Background"><img src='./gg.png' /></div>
+                        <div class="ClosedEye2"
+                        style={{
+                            position:'relative',bottom:'287px',left:'115px',
+                            borderTop:'5px solid rgb(61, 148, 242)', borderLeft:"5px solid rgb(61, 148, 242)",
+                            animationName:'eyeAnimationClip',animationDuration:"1s",WebkitAnimationIterationCount:'20',
+                            animationTimingFunction:"linear"
+                        }}></div>
+                        
+                    
                     </div>
                 </div>
                 <div style={{margin:'0px auto 0px auto',fontSize:'16px',fontWeight:'bold', textAlign:'center'}}>
@@ -379,8 +413,24 @@ class ExerciseScreen7 extends React.Component{
                 <div style={{margin:'0px auto'}}>
                     <div class="Eye">
                         <div class="Eye1"></div>    
-                        <div class="Pupil"></div>
-                        <div class="PupilSmall"></div>
+                        <div class="Pupil" style=
+                        {{
+                            animationName:'eyeAnimationEight',
+                            animationDuration:'3.6s',
+                            animationIterationCount:'10',
+                            animationTimingFunction:'linear'
+                        }}>
+                            
+                        </div>
+                        <div class="PupilSmall" style=
+                        {{
+                            animationName:'smallEyeAnimationEight',
+                            animationDuration:'3.6s',
+                            animationIterationCount:'10',
+                            animationTimingFunction:'linear'
+                        }}>
+                        </div>
+                        <div class="Background"><img src='./gg.png' /></div>
                     </div>
                 </div>
                 <div style={{margin:'0px auto 0px auto',fontSize:'16px',fontWeight:'bold',textAlign:'center'}}>
@@ -403,6 +453,7 @@ class ExerciseScreen8 extends React.Component{
                         <div class="Eye1"></div>    
                         <div class="Pupil"></div>
                         <div class="PupilSmall"></div>
+                        
                     </div>
                 </div>
                 <div style={{margin:'0px auto 0px auto',fontSize:'16px',fontWeight:'bold',textAlign:'center'}}>
@@ -422,14 +473,36 @@ class ExerciseScreen9 extends React.Component{
                 </div>
                 <div style={{margin:'0px auto'}}>
                     <div class="Eye">
-                        <div class="Eye1"></div>    
-                        <div class="Pupil"></div>
-                        <div class="PupilSmall"></div>
+                        <div style={{
+
+                            animationName:'nearAndFar1',
+                            animationDuration:'5s',
+                            animationIterationCount:'10',
+                            opacity:'0',
+
+
+
+                            
+
+                        }}><img src="./1111.png" /></div>
+                        <div style={{
+
+                            animationName:'nearAndFar2',
+                            animationDuration:'5s',
+                            animationIterationCount:'10',
+                            opacity:'1',
+                            
+                            position:'relative',
+                            bottom:'297px'
+
+
+                        }}><img src="./2222.png" /></div>
+                        
                     </div>
                 </div>
-                <div style={{margin:'0px auto 0px auto',fontSize:'16px',fontWeight:'bold',textAlign:'center'}}>
-                    Протяните вашу ладонь перед глазами и посмотрите на объект, который стоит далеко от вас,<br />
-                    теперь фокусируйте зрение с дальнего объекта на ладонь и наоборот
+                <div style={{margin:'100px auto 0px auto',fontSize:'16px',fontWeight:'bold',textAlign:'center'}}>
+                    Протяните вашу  который стоит далеко от вас,<br />
+                    теперь объекта на ладонь и наоборот
                 </div>
             </div>
         )

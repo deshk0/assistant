@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap&subset=cyrillic');
 
+
 @font-face {
     font-family: 'SFUIDISPLAY-REGULAR';
     font-weight: 700, 400;
@@ -347,8 +348,8 @@ body{
 
 
 .ClosedEye2{
-    width: 180px;
-    height: 180px;
+    width: 182px;
+    height: 182px;
 
 
     border-top: 10px solid var(--EyeGradient);
@@ -358,6 +359,7 @@ body{
     border-radius: 160px 0px 180px 0px ;
     transform: rotate(45deg);
     background-color: var(--EyeGradient);
+
 
 }
 .ClosedEye3{
@@ -405,11 +407,11 @@ body{
     position: relative;
     bottom: 139px;
     left: 54px;
-
+    
     animation-name: eyeAnimationLeftRight;
     animation-duration: 4s;
-    animation-iteration-count: 4;
-
+    animation-iteration-count: 10;
+    
     transform: rotate(0deg);
 
 
@@ -427,11 +429,11 @@ body{
     position: relative;
     bottom: 193px;
     left: 81px;
-
+    
     animation-name: smallEyeAnimationLeftRight;
     animation-duration: 4s;
-    animation-iteration-count: 4;
-
+    animation-iteration-count: 10;
+    
     border-top: 10px solid var(--black);
     border-right: 0px solid var(--white);
     border-bottom: 0px solid var(--lightGray);
@@ -477,63 +479,103 @@ body{
 
 }
 
-@keyframes eyeAnimationLeftRight{
-    0%{
-        margin-left: 0px;
-    }
-    25%{
-        margin-left: 70px;
-    }
-    50%{
-        margin-left: 0px;
-    }
-    75%{
-        margin-left: -70px;
-    }
-    100%{
-        margin-left: 0px;
-    }
-}
-@keyframes smallEyeAnimationLeftRight{
-    0%{
-        margin-left: 0px;
-    }
-    25%{
-        margin-left: 90px;
-    }
-    50%{
-        margin-left: 0px;
-    }
-    75%{
-        margin-left: -90px;
-    }
-    100%{
-        margin-left: 0px;
-    }
-}
-@keyframes eyeAnimationEight{
-    0%{
-        bottom: 187px;
-        left: 47px;
-    }
-    10%{
-        bottom: 155px;
-        left: 20px;
-    }
-    20%{
-        bottom: 145px;
-        left: 0px;
-    }
 
-    100%{
-        bottom: 147px;
-        left: 47px;
-    }
-}
+
+
 .Background{
     width: 180px;
     height: 80px;
     position: relative;
     bottom: 290px;
     right: 112px;
+}
+.Hand{
+    width: 18px;
+    height: 18px;
+
+    position: relative;
+    bottom: 193px;
+    left: 81px;
+    
+    border-top: 10px solid var(--black);
+    border-right: 0px solid var(--white);
+    border-bottom: 0px solid var(--lightGray);
+    border-left: 10px solid var(--black);
+    border-radius: 100px;
+    background-color: var(--black);
+}
+.Finger1{
+    width: 18px;
+    height: 18px;
+
+    position: relative;
+    bottom: 193px;
+    left: 81px;
+    
+    border-top: 10px solid var(--black);
+    border-right: 0px solid var(--white);
+    border-bottom: 0px solid var(--lightGray);
+    border-left: 10px solid var(--black);
+    border-radius: 100px;
+    background-color: var(--black);
+}
+.Finger2{
+    width: 18px;
+    height: 18px;
+
+    position: relative;
+    bottom: 193px;
+    left: 81px;
+    
+    border-top: 10px solid var(--black);
+    border-right: 0px solid var(--white);
+    border-bottom: 0px solid var(--lightGray);
+    border-left: 10px solid var(--black);
+    border-radius: 100px;
+    background-color: var(--black);
+}
+.Finger3{
+    width: 18px;
+    height: 18px;
+
+    position: relative;
+    bottom: 193px;
+    left: 81px;
+    
+    border-top: 10px solid var(--black);
+    border-right: 0px solid var(--white);
+    border-bottom: 0px solid var(--lightGray);
+    border-left: 10px solid var(--black);
+    border-radius: 100px;
+    background-color: var(--black);
+}
+.Finger4{
+    width: 18px;
+    height: 18px;
+
+    position: relative;
+    bottom: 193px;
+    left: 81px;
+    
+    border-top: 10px solid var(--black);
+    border-right: 0px solid var(--white);
+    border-bottom: 0px solid var(--lightGray);
+    border-left: 10px solid var(--black);
+    border-radius: 100px;
+    background-color: var(--black);
+}
+.Finger5{
+    width: 18px;
+    height: 18px;
+
+    position: relative;
+    bottom: 193px;
+    left: 81px;
+    
+    border-top: 10px solid var(--black);
+    border-right: 0px solid var(--white);
+    border-bottom: 0px solid var(--lightGray);
+    border-left: 10px solid var(--black);
+    border-radius: 100px;
+    background-color: var(--black);
 }
