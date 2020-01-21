@@ -39,16 +39,16 @@
     }
 
     10%{
-        bottom: 164px;
+        bottom: 144px;
         left: 5px;
     }
     20%{
-        bottom: 164px;
+        bottom: 139px;
         left: -25px;
     }
     30%{
         bottom: 130px;
-        left: -25px;
+        left: -15px;
     }
     40%{
         bottom: 125px;
@@ -59,16 +59,16 @@
         left: 54px;
     }
     60%{
-        bottom: 164px;
+        bottom: 144px;
         left: 103px;
     }
     70%{
-        bottom: 164px;
+        bottom: 144px;
         left: 133px;
     }
     80%{
         bottom: 130px;
-        left: 133px;
+        left: 130px;
     }
     90%{
         bottom: 125px;
@@ -86,31 +86,31 @@
     }
 
     10%{
-        bottom: 218px;
+        bottom: 198px;
         left: 32px;
     }
     20%{
-        bottom: 218px;
-        left: 2px;
+        bottom: 193px;
+        left: -5px;
     }
     30%{
         bottom: 184px;
-        left: 2px;
+        left: 5px;
     }
     40%{
         bottom: 179px;
-        left: 56px;
+        left: 50px;
     }
     50%{
         bottom: 193px;
         left: 81px;
     }
     60%{
-        bottom: 218px;
+        bottom: 198px;
         left: 130px;
     }
     70%{
-        bottom: 218px;
+        bottom: 198px;
         left: 160px;
     }
     80%{
@@ -160,7 +160,7 @@
         bottom: 139px;
     }
     75%{
-        bottom: 100px;
+        bottom: 110px;
     }
     100%{
         bottom: 139px;
@@ -177,7 +177,7 @@
         bottom: 193px;
     }
     75%{
-        bottom: 149px;
+        bottom: 159px;
     }
     100%{
         bottom: 193px;

@@ -44,9 +44,11 @@ export class Pages extends React.Component{
                 }
                 </div>
                 <div id = 'Menu'>
-                    <div style={{display:'flex',margin:'auto'}} onClick={this.OnSetClick = this.OnSetClick.bind(this)}><SettingsButton /></div>
-                    <div style={{display:'flex',margin:'auto 30px'}} onClick={this.OnEyeClick = this.OnEyeClick.bind(this)}><EyeButton /></div>
-                    <div style={{display:'flex',margin:'auto'}} onClick={this.OnMpClick = this.OnMpClick.bind(this)}><MyProfileButton /></div>
+                    <div style={{display:'flex'}}>
+                        <div style={{display:'flex',margin:'auto'}} onClick={this.OnSetClick = this.OnSetClick.bind(this)}><SettingsButton /></div>
+                        <div style={{display:'flex',margin:'auto 30px'}} onClick={this.OnEyeClick = this.OnEyeClick.bind(this)}><EyeButton /></div>
+                        <div style={{display:'flex',margin:'auto'}} onClick={this.OnMpClick = this.OnMpClick.bind(this)}><MyProfileButton /></div>
+                    </div>
                 </div>
             </div>
         )

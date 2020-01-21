@@ -151,7 +151,7 @@ class Timer extends React.Component {
       
       this.state = { 
           seconds: 15,
-          screen: 1,
+          screen: 7,
           goBack: false
         };
     }
@@ -251,8 +251,12 @@ class ExerciseScreen1 extends React.Component{
                 <div style={{margin:'0px auto 0px auto',fontSize:'16px',fontWeight:'bold'}}>
                     <div class="Eye">
                         <div class="Eye1"></div> 
-                        <div class="Pupil"></div>
-                        <div class="PupilSmall"></div> 
+                        <div class="Pupil" style={{
+                            animationName:'none',
+                        }}></div>
+                        <div class="PupilSmall" style={{
+                            animationName:'none',
+                        }}></div> 
                         <div class="ClosedEye2" style={{
                             animationName:'eyeAnimationClose',
                             animationDuration:'0.1s',
@@ -260,8 +264,8 @@ class ExerciseScreen1 extends React.Component{
                             animationIterationCount:'1',
                             animationDelay:'1s',
                             position:'relative',
-                            bottom:'284px',
-                            left:'111px',
+                            bottom:'299px',
+                            left:'1px',
                             animationFillMode:'backwards'
                         }}>
                        </div> 
@@ -296,7 +300,7 @@ class ExerciseScreen2 extends React.Component{
                             animationDuration:'4',
                             animationIterationCount:'10',
                         }}></div>
-                        <div class="Background"><img src='./gg.png' /></div>
+                        <div class="Background"></div>
                     </div>
                 </div>
                 <div style={{margin:'0px auto 0px auto',fontSize:'16px',fontWeight:'bold',textAlign:'center'}}>
@@ -321,11 +325,11 @@ class ExerciseScreen3 extends React.Component{
                             }}>
                             </div>
                         <div class="PupilSmall"></div>
-                        <div class="Background"><img src='./gg.png' /></div>
+                        <div class="Background"></div>
                         <div class="ClosedEye2"
                         style={{
-                            position:'relative',bottom:'287px',left:'115px',
-                            borderTop:'5px solid rgb(61, 148, 242)', borderLeft:"5px solid rgb(61, 148, 242)",
+                            position:'relative',bottom:'504px',left:'7px',
+                            borderTop:'6px solid rgb(61, 148, 242)', borderLeft:"6px solid rgb(61, 148, 242)",
                             animationName:'eyeAnimationClip',animationDuration:"1s",WebkitAnimationIterationCount:'20',
                             animationTimingFunction:"linear"
                         }}></div>
@@ -430,7 +434,7 @@ class ExerciseScreen7 extends React.Component{
                             animationTimingFunction:'linear'
                         }}>
                         </div>
-                        <div class="Background"><img src='./gg.png' /></div>
+                        <div class="Background"></div>
                     </div>
                 </div>
                 <div style={{margin:'0px auto 0px auto',fontSize:'16px',fontWeight:'bold',textAlign:'center'}}>

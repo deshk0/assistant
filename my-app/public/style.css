@@ -385,28 +385,24 @@ body{
     height: 180px;
 }
 .Eye1{
-    width: 180px;
-    height: 180px;
 
+    height: 210px;
+    
     position: relative;
     top: 0px;
-    left: 0px;
+    left: 3px;
 
-    border-top: 10px solid var(--white);
-    border-right: 0px solid var(--white);
-    border-bottom: 0px solid var(--lightGray);
-    border-left: 10px solid var(--white);
     border-radius: 160px 0px 180px 0px ;
-    transform: rotate(45deg);
+    transform: rotate(47deg);
     background-color: var(--white);
 }
 .Pupil{
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
 
     position: relative;
     bottom: 139px;
-    left: 54px;
+    left: 62px;
     
     animation-name: eyeAnimationLeftRight;
     animation-duration: 4s;
@@ -414,32 +410,24 @@ body{
     
     transform: rotate(0deg);
 
-
-    border-top: 10px solid var(--EyeGradient);
-    border-right: 0px solid var(--white);
-    border-bottom: 0px solid var(--lightGray);
-    border-left: 10px solid var(--EyeGradient);
     border-radius: 100px;
     background-color: var(--EyeGradient);
 }
 .PupilSmall{
-    width: 18px;
-    height: 18px;
+    width: 28px;
+    height: 28px;
 
     position: relative;
     bottom: 193px;
-    left: 81px;
+    left: 88px;
     
     animation-name: smallEyeAnimationLeftRight;
     animation-duration: 4s;
     animation-iteration-count: 10;
     
-    border-top: 10px solid var(--black);
-    border-right: 0px solid var(--white);
-    border-bottom: 0px solid var(--lightGray);
-    border-left: 10px solid var(--black);
     border-radius: 100px;
     background-color: var(--black);
+
 }
 
 .AcceptCircle{
@@ -484,98 +472,17 @@ body{
 
 .Background{
     width: 180px;
-    height: 80px;
-    position: relative;
-    bottom: 290px;
-    right: 112px;
-}
-.Hand{
-    width: 18px;
-    height: 18px;
+    height: 180px;
 
     position: relative;
-    bottom: 193px;
-    left: 81px;
-    
-    border-top: 10px solid var(--black);
-    border-right: 0px solid var(--white);
-    border-bottom: 0px solid var(--lightGray);
-    border-left: 10px solid var(--black);
-    border-radius: 100px;
-    background-color: var(--black);
-}
-.Finger1{
-    width: 18px;
-    height: 18px;
+    bottom: 307px;
+    left: -2px;
 
-    position: relative;
-    bottom: 193px;
-    left: 81px;
-    
-    border-top: 10px solid var(--black);
-    border-right: 0px solid var(--white);
-    border-bottom: 0px solid var(--lightGray);
-    border-left: 10px solid var(--black);
-    border-radius: 100px;
-    background-color: var(--black);
-}
-.Finger2{
-    width: 18px;
-    height: 18px;
-
-    position: relative;
-    bottom: 193px;
-    left: 81px;
-    
-    border-top: 10px solid var(--black);
-    border-right: 0px solid var(--white);
-    border-bottom: 0px solid var(--lightGray);
-    border-left: 10px solid var(--black);
-    border-radius: 100px;
-    background-color: var(--black);
-}
-.Finger3{
-    width: 18px;
-    height: 18px;
-
-    position: relative;
-    bottom: 193px;
-    left: 81px;
-    
-    border-top: 10px solid var(--black);
-    border-right: 0px solid var(--white);
-    border-bottom: 0px solid var(--lightGray);
-    border-left: 10px solid var(--black);
-    border-radius: 100px;
-    background-color: var(--black);
-}
-.Finger4{
-    width: 18px;
-    height: 18px;
-
-    position: relative;
-    bottom: 193px;
-    left: 81px;
-    
-    border-top: 10px solid var(--black);
-    border-right: 0px solid var(--white);
-    border-bottom: 0px solid var(--lightGray);
-    border-left: 10px solid var(--black);
-    border-radius: 100px;
-    background-color: var(--black);
-}
-.Finger5{
-    width: 18px;
-    height: 18px;
-
-    position: relative;
-    bottom: 193px;
-    left: 81px;
-    
-    border-top: 10px solid var(--black);
-    border-right: 0px solid var(--white);
-    border-bottom: 0px solid var(--lightGray);
-    border-left: 10px solid var(--black);
-    border-radius: 100px;
-    background-color: var(--black);
+    border-top: 13px solid var(--black);
+    border-right: 13px solid var(--black);
+    border-bottom: 13px solid var(--black);
+    border-left: 13px solid var(--black);
+    border-radius: 160px 0px 180px 0px ;
+    transform: rotate(45deg);
+    background-color: var(--transparent);
 }
