@@ -151,7 +151,7 @@ class Timer extends React.Component {
       
       this.state = { 
           seconds: 15,
-          screen: 7,
+          screen: 3,
           goBack: false
         };
     }
@@ -250,23 +250,31 @@ class ExerciseScreen1 extends React.Component{
                 </div>
                 <div style={{margin:'0px auto 0px auto',fontSize:'16px',fontWeight:'bold'}}>
                     <div class="Eye">
-                        <div class="Eye1"></div> 
+                        <div class="Eye1" style={{
+                            position:'relative',
+                            left:'4px',
+                        }}></div> 
                         <div class="Pupil" style={{
                             animationName:'none',
+                            margin:'0px auto'
                         }}></div>
                         <div class="PupilSmall" style={{
                             animationName:'none',
+                            margin:'0px auto'
                         }}></div> 
                         <div class="ClosedEye2" style={{
+                            
                             animationName:'eyeAnimationClose',
                             animationDuration:'0.1s',
                             animationTimingFunction:'ease-in-out',
                             animationIterationCount:'1',
                             animationDelay:'1s',
+                            animationFillMode:'backwards',
+                            
                             position:'relative',
-                            bottom:'299px',
+                            bottom:'300px',
                             left:'1px',
-                            animationFillMode:'backwards'
+                            
                         }}>
                        </div> 
                     </div>
@@ -289,7 +297,9 @@ class ExerciseScreen2 extends React.Component{
                 </div>
                 <div style={{margin:'0px auto'}}>
                     <div class="Eye">
-                        <div class="Eye1"></div>    
+                        <div class="Eye1" style={{
+                            margin:'0 auto'
+                        }}></div>    
                         <div class="Pupil" style={{
                             animationName:'eyeAnimationUpDown',
                             animationDuration:'4',
@@ -300,7 +310,11 @@ class ExerciseScreen2 extends React.Component{
                             animationDuration:'4',
                             animationIterationCount:'10',
                         }}></div>
-                        <div class="Background"></div>
+                        <div class="Background" style={{
+                            transform:'rotate(44deg)',
+                            margin:'0 auto',
+                            bottom:'303px'
+                        }}></div>
                     </div>
                 </div>
                 <div style={{margin:'0px auto 0px auto',fontSize:'16px',fontWeight:'bold',textAlign:'center'}}>
@@ -320,17 +334,31 @@ class ExerciseScreen3 extends React.Component{
                 <div style={{margin:'0px auto 0px auto',fontSize:'16px',fontWeight:'bold'}}>Расслабьтесь</div>
                 <div style={{margin:'0px auto'}}>
                     <div class="Eye">
-                        <div class="Eye1"></div>    
+                        <div class="Eye1" style={{
+                            margin:'0px auto'
+                        }}></div>    
                         <div class="Pupil" style={{
-                            }}>
-                            </div>
-                        <div class="PupilSmall"></div>
-                        <div class="Background"></div>
+                            animationName:'none',
+                            margin:'0px auto'
+                        }}>
+                        </div>
+                        <div class="PupilSmall" style={{
+                            animationName:'none',
+                            margin:'0px auto'
+                        }}></div>
+                        <div class="Background" style={{
+                            margin:'0px auto'
+                        }}></div>
                         <div class="ClosedEye2"
                         style={{
-                            position:'relative',bottom:'504px',left:'7px',
-                            borderTop:'6px solid rgb(61, 148, 242)', borderLeft:"6px solid rgb(61, 148, 242)",
-                            animationName:'eyeAnimationClip',animationDuration:"1s",WebkitAnimationIterationCount:'20',
+                            position:'relative',
+                            bottom:'496px',
+                            margin:'0px auto',
+                            borderTop:'6px solid rgb(61, 148, 242)', 
+                            borderLeft:"6px solid rgb(61, 148, 242)",
+                            animationName:'eyeAnimationClip',
+                            animationDuration:"1s",
+                            WebkitAnimationIterationCount:'20',
                             animationTimingFunction:"linear"
                         }}></div>
                         

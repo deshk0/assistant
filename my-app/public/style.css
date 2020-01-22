@@ -348,8 +348,8 @@ body{
 
 
 .ClosedEye2{
-    width: 182px;
-    height: 182px;
+    width: 178px;
+    height: 178px;
 
 
     border-top: 10px solid var(--EyeGradient);
@@ -385,12 +385,12 @@ body{
     height: 180px;
 }
 .Eye1{
+    height: 187px;
+    width: 182px;
 
-    height: 210px;
-    
     position: relative;
-    top: 0px;
-    left: 3px;
+    top: 1px;
+    
 
     border-radius: 160px 0px 180px 0px ;
     transform: rotate(47deg);
@@ -402,7 +402,7 @@ body{
 
     position: relative;
     bottom: 139px;
-    left: 62px;
+    margin: 0 auto;
     
     animation-name: eyeAnimationLeftRight;
     animation-duration: 4s;
@@ -419,7 +419,7 @@ body{
 
     position: relative;
     bottom: 193px;
-    left: 88px;
+    margin: 0 auto;
     
     animation-name: smallEyeAnimationLeftRight;
     animation-duration: 4s;
@@ -472,16 +472,16 @@ body{
 
 .Background{
     width: 180px;
-    height: 180px;
+    height: 174px;
 
     position: relative;
-    bottom: 307px;
-    left: -2px;
+    bottom: 299px;
+    
 
-    border-top: 13px solid var(--black);
-    border-right: 13px solid var(--black);
-    border-bottom: 13px solid var(--black);
-    border-left: 13px solid var(--black);
+    border-top: 15px solid var(--black);
+    border-right: 15px solid var(--black);
+    border-bottom: 15px solid var(--black);
+    border-left: 15px solid var(--black);
     border-radius: 160px 0px 180px 0px ;
     transform: rotate(45deg);
     background-color: var(--transparent);
