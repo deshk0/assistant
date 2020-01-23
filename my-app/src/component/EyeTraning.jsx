@@ -151,7 +151,7 @@ class Timer extends React.Component {
       
       this.state = { 
           seconds: 15,
-          screen: 3,
+          screen: 2,
           goBack: false
         };
     }
@@ -250,10 +250,8 @@ class ExerciseScreen1 extends React.Component{
                 </div>
                 <div style={{margin:'0px auto 0px auto',fontSize:'16px',fontWeight:'bold'}}>
                     <div class="Eye">
-                        <div class="Eye1" style={{
-                            position:'relative',
-                            left:'4px',
-                        }}></div> 
+                    <img src="./Eye.svg" style={{height:'300px', width:'300px',position:'relative',bottom:'73px'}} />
+
                         <div class="Pupil" style={{
                             animationName:'none',
                             margin:'0px auto'
@@ -297,23 +295,28 @@ class ExerciseScreen2 extends React.Component{
                 </div>
                 <div style={{margin:'0px auto'}}>
                     <div class="Eye">
-                        <div class="Eye1" style={{
-                            margin:'0 auto'
-                        }}></div>    
+                    <img src="./Eye.svg" style={{height:'300px', width:'300px',position:'relative',bottom:'73px'}} />
+ 
                         <div class="Pupil" style={{
+                            bottom:'253px',
                             animationName:'eyeAnimationUpDown',
                             animationDuration:'4',
                             animationIterationCount:'10',
+                            
+                            
                         }} ></div>                  
                         <div class="PupilSmall" style={{
+                            bottom:'307px',
                             animationName:'smallEyeAnimationUpDown',
                             animationDuration:'4',
                             animationIterationCount:'10',
+                            
+
                         }}></div>
                         <div class="Background" style={{
                             transform:'rotate(44deg)',
                             margin:'0 auto',
-                            bottom:'303px'
+                            bottom:'420px'
                         }}></div>
                     </div>
                 </div>
@@ -334,35 +337,8 @@ class ExerciseScreen3 extends React.Component{
                 <div style={{margin:'0px auto 0px auto',fontSize:'16px',fontWeight:'bold'}}>Расслабьтесь</div>
                 <div style={{margin:'0px auto'}}>
                     <div class="Eye">
-                        <div class="Eye1" style={{
-                            margin:'0px auto'
-                        }}></div>    
-                        <div class="Pupil" style={{
-                            animationName:'none',
-                            margin:'0px auto'
-                        }}>
-                        </div>
-                        <div class="PupilSmall" style={{
-                            animationName:'none',
-                            margin:'0px auto'
-                        }}></div>
-                        <div class="Background" style={{
-                            margin:'0px auto'
-                        }}></div>
-                        <div class="ClosedEye2"
-                        style={{
-                            position:'relative',
-                            bottom:'496px',
-                            margin:'0px auto',
-                            borderTop:'6px solid rgb(61, 148, 242)', 
-                            borderLeft:"6px solid rgb(61, 148, 242)",
-                            animationName:'eyeAnimationClip',
-                            animationDuration:"1s",
-                            WebkitAnimationIterationCount:'20',
-                            animationTimingFunction:"linear"
-                        }}></div>
                         
-                    
+                    <img src="./Eye.svg" style={{height:'300px', width:'300px',position:'relative',bottom:'73px'}} />
                     </div>
                 </div>
                 <div style={{margin:'0px auto 0px auto',fontSize:'16px',fontWeight:'bold', textAlign:'center'}}>
