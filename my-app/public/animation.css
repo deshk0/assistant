@@ -151,36 +151,36 @@
 }
 @keyframes eyeAnimationUpDown{
     0%{
-        bottom: 139px;
+        bottom: 253px;
     }
     25%{
-        bottom: 170px;
+        bottom: 284px;
     }
     50%{
-        bottom: 139px;
+        bottom: 253px;
     }
     75%{
-        bottom: 110px;
+        bottom: 224px;
     }
     100%{
-        bottom: 139px;
+        bottom: 253px;
     }
 }
 @keyframes smallEyeAnimationUpDown{
     0%{
-        bottom: 193px;
+        bottom: 307px;
     }
     25%{
-        bottom: 235px;
+        bottom: 349px;
     }
     50%{
-        bottom: 193px;
+        bottom: 307px;
     }
     75%{
-        bottom: 159px;
+        bottom: 273px;
     }
     100%{
-        bottom: 193px;
+        bottom: 307px;
     }
 }
 @keyframes eyeAnimationClock{
