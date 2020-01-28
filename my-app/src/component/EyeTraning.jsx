@@ -151,7 +151,7 @@ class Timer extends React.Component {
       
       this.state = { 
           seconds: 15,
-          screen: 3,
+          screen: 6,
           goBack: false
         };
     }
@@ -341,18 +341,29 @@ class ExerciseScreen3 extends React.Component{
             <div class='EyeTraningPage'>
                 <div style={{margin:'0px auto 0px auto',fontSize:'16px',fontWeight:'bold'}}>Расслабьтесь</div>
                 <div style={{margin:'0px auto'}}>
-                    <div class="Eye">                        
-                        <img src="./Eye.svg" style={{height:'300px', width:'300px',position:'relative',bottom:'73px'}} />
+                    <div class="Eye">   
+
+                        <img src="./Eye.svg" style={{height:'300px', width:'300px',position:'relative',bottom:'73px',right:'3px',}} />
                         <div class="Pupil" style={{
                             animationName:'nichego',
                             bottom:'250px',
-                            left:'3px'
                         }}></div>
                         <div class="PupilSmall" style={{
                             animationName:'nichego',
-                            bottom:'250px',
-                            left:'3px'
+                            bottom:'305px',
                         }}></div>
+                        <img src="./EyeBlue.svg" style={{
+                            height:'300px',
+                            width:'300px',
+                            position:'relative',
+                            bottom:'485px',
+                            right:'3px',
+                            animationName:'eyeAnimationClip',
+                            animationDuration:'0.3s',
+                            animationIterationCount:"100",
+                            animationTimingFunction:'linear'
+                            }} />
+
                     </div>
                 </div>
                 <div style={{margin:'0px auto 0px auto',fontSize:'16px',fontWeight:'bold', textAlign:'center'}}>
@@ -370,9 +381,29 @@ class ExerciseScreen4 extends React.Component{
                 <div style={{margin:'0px auto 0px auto',fontSize:'16px',fontWeight:'bold'}}>Влево-вправо</div>
                 <div style={{margin:'0px auto'}}>
                     <div class="Eye">
-                        <div class="Eye1"></div>    
-                        <div class="Pupil"></div>
-                        <div class="PupilSmall"></div>
+                    <img src="./Eye.svg" style={{height:'300px', width:'300px',position:'relative',bottom:'73px'}} />
+ 
+                        <div class="Pupil" style={{
+                            bottom:'253px',
+                            animationName:'eyeAnimationLeftRight',
+                            animationDuration:'4s',
+                            animationIterationCount:'10',
+                            
+                            
+                        }} ></div>                  
+                        <div class="PupilSmall" style={{
+                            bottom:'307px',
+                            animationName:'smallEyeAnimationLeftRight',
+                            animationDuration:'4s',
+                            animationIterationCount:'10',
+                            
+
+                        }}></div>
+                        <div class="Background" style={{
+                            transform:'rotate(44deg)',
+                            margin:'0 auto',
+                            bottom:'420px'
+                        }}></div>
                     </div>
                 </div>
                 <div style={{margin:'0px auto 0px auto',fontSize:'16px',fontWeight:'bold', textAlign:'center'}}>
@@ -390,9 +421,35 @@ class ExerciseScreen5 extends React.Component{
                 <div style={{margin:'0px auto 0px auto',fontSize:'16px',fontWeight:'bold'}}>Часики</div>
                 <div style={{margin:'0px auto'}}>
                     <div class="Eye">
-                        <div class="Eye1"></div>    
-                        <div class="Pupil"></div>
-                        <div class="PupilSmall"></div>
+                    <img src="./Eye.svg" style={{height:'300px', width:'300px',position:'relative',bottom:'73px'}} />
+ 
+                        <div class="Pupil" style={{
+                            bottom:'253px',
+                            animationName:'eyeAnimationClock',
+                            animationDuration:'4s',
+                            animationIterationCount:'10',
+                            animationTimingFunction:'cubic-bezier(0.52,-0.05, 0.45, 1.08)'
+                            
+                           
+                            
+                            
+                        }} ></div>                  
+                        <div class="PupilSmall" style={{
+                            bottom:'307px',
+                            animationName:'smallEyeAnimationClock',
+                            animationDuration:'4s',
+                            animationIterationCount:'10',
+                            animationTimingFunction:'cubic-bezier(0.52,-0.05, 0.45, 1.08)'
+                            
+                           
+                            
+
+                        }}></div>
+                        <div class="Background" style={{
+                            transform:'rotate(44deg)',
+                            margin:'0 auto',
+                            bottom:'420px'
+                        }}></div>
                     </div>
                 </div>
                 <div style={{margin:'0px auto 0px auto',fontSize:'16px',fontWeight:'bold', textAlign:'center'}}>
@@ -411,9 +468,31 @@ class ExerciseScreen6 extends React.Component{
                 <div style={{margin:'0px auto 0px auto',fontSize:'16px',fontWeight:'bold'}}>Круговые вращения</div>
                 <div style={{margin:'0px auto'}}>
                     <div class="Eye">
-                        <div class="Eye1"></div>    
-                        <div class="Pupil"></div>
-                        <div class="PupilSmall"></div>
+                    <img src="./Eye.svg" style={{height:'300px', width:'300px',position:'relative',bottom:'73px'}} />
+ 
+                        <div class="Pupil" style={{
+                            
+                            bottom:'253px',
+                            animationName:'eyeAnimationCircle',
+                            animationDuration:'2.5s',
+                            animationIterationCount:'1000',
+                            animationTimingFunction:'linear'
+                         
+                        }} ></div>                  
+                        <div class="PupilSmall" style={{
+                            
+                            bottom:'307px',
+                            animationName:'smallEyeAnimationCircle',
+                            animationDuration:'2.5s',
+                            animationIterationCount:'1000',
+                            animationTimingFunction:'linear'
+
+                        }}></div>
+                        <div class="Background" style={{
+                            transform:'rotate(44deg)',
+                            margin:'0 auto',
+                            bottom:'420px'
+                        }}></div>
                     </div>
                 </div>
                 <div style={{margin:'0px auto 0px auto',fontSize:'16px',fontWeight:'bold',textAlign:'center'}}>
