@@ -151,7 +151,7 @@ class Timer extends React.Component {
       
       this.state = { 
           seconds: 15,
-          screen: 2,
+          screen: 3,
           goBack: false
         };
     }
@@ -254,11 +254,16 @@ class ExerciseScreen1 extends React.Component{
 
                         <div class="Pupil" style={{
                             animationName:'none',
-                            margin:'0px auto'
+                            margin:'0px auto',
+                            bottom:"249px",
+                            left:'5px',
                         }}></div>
                         <div class="PupilSmall" style={{
                             animationName:'none',
-                            margin:'0px auto'
+                            margin:'0px auto',
+                            bottom:"303px",
+                            left:'5px',
+
                         }}></div> 
                         <div class="ClosedEye2" style={{
                             
@@ -266,12 +271,12 @@ class ExerciseScreen1 extends React.Component{
                             animationDuration:'0.1s',
                             animationTimingFunction:'ease-in-out',
                             animationIterationCount:'1',
-                            animationDelay:'1s',
+                            animationDelay:'100s',
                             animationFillMode:'backwards',
                             
                             position:'relative',
-                            bottom:'300px',
-                            left:'1px',
+                            bottom:'413px',
+                            left:'58px',
                             
                         }}>
                        </div> 
@@ -336,9 +341,18 @@ class ExerciseScreen3 extends React.Component{
             <div class='EyeTraningPage'>
                 <div style={{margin:'0px auto 0px auto',fontSize:'16px',fontWeight:'bold'}}>Расслабьтесь</div>
                 <div style={{margin:'0px auto'}}>
-                    <div class="Eye">
-                        
-                    <img src="./Eye.svg" style={{height:'300px', width:'300px',position:'relative',bottom:'73px'}} />
+                    <div class="Eye">                        
+                        <img src="./Eye.svg" style={{height:'300px', width:'300px',position:'relative',bottom:'73px'}} />
+                        <div class="Pupil" style={{
+                            animationName:'nichego',
+                            bottom:'250px',
+                            left:'3px'
+                        }}></div>
+                        <div class="PupilSmall" style={{
+                            animationName:'nichego',
+                            bottom:'250px',
+                            left:'3px'
+                        }}></div>
                     </div>
                 </div>
                 <div style={{margin:'0px auto 0px auto',fontSize:'16px',fontWeight:'bold', textAlign:'center'}}>
