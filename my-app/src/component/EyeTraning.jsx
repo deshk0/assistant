@@ -151,7 +151,7 @@ class Timer extends React.Component {
       
       this.state = { 
           seconds: 15,
-          screen: 6,
+          screen: 7,
           goBack: false
         };
     }
@@ -513,25 +513,31 @@ class ExerciseScreen7 extends React.Component{
                 </div>
                 <div style={{margin:'0px auto'}}>
                     <div class="Eye">
-                        <div class="Eye1"></div>    
-                        <div class="Pupil" style=
-                        {{
-                            animationName:'eyeAnimationEight',
-                            animationDuration:'3.6s',
-                            animationIterationCount:'10',
-                            animationTimingFunction:'linear'
-                        }}>
+                        <img src="./Eye.svg" style={{height:'300px', width:'300px',position:'relative',bottom:'73px'}} />
+ 
+                        <div class="Pupil" style={{
                             
-                        </div>
-                        <div class="PupilSmall" style=
-                        {{
-                            animationName:'smallEyeAnimationEight',
-                            animationDuration:'3.6s',
-                            animationIterationCount:'10',
+                            bottom:'253px',
+                            animationName:'eyeAnimationEight',
+                            animationDuration:'3s',
+                            animationIterationCount:'1000',
                             animationTimingFunction:'linear'
-                        }}>
-                        </div>
-                        <div class="Background"></div>
+                         
+                        }} ></div>                  
+                        <div class="PupilSmall" style={{
+                            
+                            bottom:'307px',
+                            animationName:'smallEyeAnimationEight',
+                            animationDuration:'3s',
+                            animationIterationCount:'1000',
+                            animationTimingFunction:'linear'
+
+                        }}></div>
+                        <div class="Background" style={{
+                            transform:'rotate(44deg)',
+                            margin:'0 auto',
+                            bottom:'420px'
+                        }}></div>
                     </div>
                 </div>
                 <div style={{margin:'0px auto 0px auto',fontSize:'16px',fontWeight:'bold',textAlign:'center'}}>
