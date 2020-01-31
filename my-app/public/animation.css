@@ -227,18 +227,24 @@
 }
 @keyframes nearAndFar1{
     0%{
-        opacity: 0;
+        filter: blur(2px);
+    }
+    50%{
+        filter: blur(0px);
     }
     100%{
-        opacity: 1;
+        filter: blur(2px);
     }
 }
 @keyframes nearAndFar2{
     0%{
-        opacity: 1;
+        filter: blur(0px);
+    }
+    50%{
+        filter: blur(2px);
     }
     100%{
-        opacity: 0;
+        filter: blur(0px);
     }
 }
 @keyframes eyeAnimationCircle{
@@ -316,6 +322,58 @@
     }
     100%{
         bottom: 351px;
+        left: 0px;
+    }
+}
+@keyframes eyeAnimationHourglass{
+    0%{
+        bottom: 253px;
+        left: 0px;
+    }
+    20%{
+        bottom: 275px;
+        left: -55px;
+    }
+    40%{
+        bottom: 230px;
+        left: -55px;
+    }
+    60%{
+        bottom: 275px;
+        left: 53px;
+    }
+    80%{
+        bottom: 230px;
+        left: 55px;
+    }
+    100%{
+        bottom: 253px;
+        left: 0px;
+    }
+}
+@keyframes smallEyeAnimationHourglass{
+    0%{
+        bottom: 307px;
+        left: 0px;
+    }
+    20%{
+        bottom: 340px;
+        left: -60px;
+    }
+    40%{
+        bottom: 270px;
+        left: -60px;
+    }
+    60%{
+        bottom: 340px;
+        left: 60px;
+    }
+    80%{
+        bottom: 270px;
+        left: 60px;
+    }
+    100%{
+        bottom: 307px;
         left: 0px;
     }
 }

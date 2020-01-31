@@ -150,9 +150,9 @@ class Timer extends React.Component {
       super(props);
       
       this.state = { 
-          seconds: 15,
-          screen: 7,
-          goBack: false
+          seconds: 1,
+          screen: 0,
+          goBack: false,
         };
     }
   
@@ -161,10 +161,10 @@ class Timer extends React.Component {
             clearInterval(this.interval)
             
         }
-        if(this.state.seconds === 0 ){
+        if(this.state.seconds === 0){
             this.setState({
                 screen: this.state.screen + 1 ,
-                seconds: 16
+                seconds: 21
             })
         }
         if(this.state.seconds !== 0){
@@ -233,9 +233,50 @@ class StartScreen extends React.Component{
 
     render(){
         return(
-            <div onClick={this.onClick = this.onClick.bind(this)}>
-                Knopka
+            <div style={{margin:"0 auto"}}>
+                <div style={{margin:'10px',textAlign:'center'}}>Рекомендации</div>
+                
+                <div style={{margin:'10px',textAlign:'center'}}>
+                    В комплексе набор упражнений, 
+                    во время которых нужно смотреть в направления,
+                    указываемые точкой.
+                </div>
 
+                <div style={{margin:'10px',textAlign:'center'}}>
+                    Точка показывает только направление — взгляд перемещайте до упора,
+                    но не сильно.
+                </div>
+
+                <div style={{margin:'10px',textAlign:'center'}}>
+                    В крайних точках задерживайте взгляд на секунду.
+                </div>
+
+                <div style={{margin:'10px',textAlign:'center'}}>
+                    После выполнения каждого упражнения можно легонько зажмуриться или
+                    поморгать пару секунд – 
+                    это помогает расслабиться глазам.
+                </div>
+
+                <div style={{margin:'10px',textAlign:'center'}}>
+                    Общее время упражнения: 3 минуты 25 секунд.
+                </div>
+
+                <div style={{margin:'70px 10px 10px 10px',textAlign:'center'}}>Больше не показывать</div>
+                <div onClick={this.onClick = this.onClick.bind(this)} 
+                    style={{
+                        margin:'10px auto',
+                        textAlign:'center',
+                        width:'170px',
+                        height:'35px',
+                        backgroundColor:"#6b6b6f",
+                        borderRadius:'10px',
+                        }}>
+                    <div style={{padding:'8px'}}>
+                        Начать
+                    </div>
+                    
+                </div>
+                
             </div>
         )
     }
@@ -271,7 +312,7 @@ class ExerciseScreen1 extends React.Component{
                             animationDuration:'0.1s',
                             animationTimingFunction:'ease-in-out',
                             animationIterationCount:'1',
-                            animationDelay:'100s',
+                            animationDelay:'0.5s',
                             animationFillMode:'backwards',
                             
                             position:'relative',
@@ -282,7 +323,7 @@ class ExerciseScreen1 extends React.Component{
                        </div> 
                     </div>
                 </div>
-                <div style={{margin:'0px auto 0px auto',fontSize:'16px',fontWeight:'bold'}}>
+                <div style={{margin:'0px auto 0px auto',fontSize:'16px',}}>
                     Закройте глаза до сигнала
                 </div>
             </div>
@@ -325,7 +366,7 @@ class ExerciseScreen2 extends React.Component{
                         }}></div>
                     </div>
                 </div>
-                <div style={{margin:'0px auto 0px auto',fontSize:'16px',fontWeight:'bold',textAlign:'center'}}>
+                <div style={{margin:'0px auto 0px auto',fontSize:'16px',textAlign:'center'}}>
                     Плавно переводите взгляд сверху в низ,<br />
                     а мысленно продолжаем движение глаз за макушку головы и подбородок
                 </div>
@@ -366,7 +407,7 @@ class ExerciseScreen3 extends React.Component{
 
                     </div>
                 </div>
-                <div style={{margin:'0px auto 0px auto',fontSize:'16px',fontWeight:'bold', textAlign:'center'}}>
+                <div style={{margin:'0px auto 0px auto',fontSize:'16px', textAlign:'center'}}>
                     Поморгайте легко и часто,<br />примерно так, как машет крылышками мотылёк
                 </div>
             </div>
@@ -406,7 +447,7 @@ class ExerciseScreen4 extends React.Component{
                         }}></div>
                     </div>
                 </div>
-                <div style={{margin:'0px auto 0px auto',fontSize:'16px',fontWeight:'bold', textAlign:'center'}}>
+                <div style={{margin:'0px auto 0px auto',fontSize:'16px', textAlign:'center'}}>
                     Плавно переводите взгляд слева на право,<br />а мысленно продолжаем движение глаз за ухо
                 </div>
             </div>
@@ -452,7 +493,7 @@ class ExerciseScreen5 extends React.Component{
                         }}></div>
                     </div>
                 </div>
-                <div style={{margin:'0px auto 0px auto',fontSize:'16px',fontWeight:'bold', textAlign:'center'}}>
+                <div style={{margin:'0px auto 0px auto',fontSize:'16px', textAlign:'center'}}>
                     Представьте циферблад<br /> обозначте на нём 12, 3, 6 и 9 часов<br />
                     и перемещайте взгляд по этим точкам
                 </div>
@@ -495,7 +536,7 @@ class ExerciseScreen6 extends React.Component{
                         }}></div>
                     </div>
                 </div>
-                <div style={{margin:'0px auto 0px auto',fontSize:'16px',fontWeight:'bold',textAlign:'center'}}>
+                <div style={{margin:'0px auto 0px auto',fontSize:'16px',textAlign:'center'}}>
                     Представьте перед собой круг<br />
                     и чётко по его траектории ведите взгляд, рисуя его снова и снова
                 </div>
@@ -540,7 +581,7 @@ class ExerciseScreen7 extends React.Component{
                         }}></div>
                     </div>
                 </div>
-                <div style={{margin:'0px auto 0px auto',fontSize:'16px',fontWeight:'bold',textAlign:'center'}}>
+                <div style={{margin:'0px auto 0px auto',fontSize:'16px',textAlign:'center'}}>
                     Пусть витя текст напишет, мне в падлу
                 </div>
             </div>
@@ -557,13 +598,35 @@ class ExerciseScreen8 extends React.Component{
                 </div>
                 <div style={{margin:'0px auto'}}>
                     <div class="Eye">
-                        <div class="Eye1"></div>    
-                        <div class="Pupil"></div>
-                        <div class="PupilSmall"></div>
+                        <img src="./Eye.svg" style={{height:'300px', width:'300px',position:'relative',bottom:'73px'}} />
+ 
+                        <div class="Pupil" style={{
+                            
+                            bottom:'253px',
+                            animationName:'eyeAnimationHourglass',
+                            animationDuration:'2.8s',
+                            animationIterationCount:'10',
+                            animationTimingFunction:'linear'
+                         
+                        }} ></div>                  
+                        <div class="PupilSmall" style={{
+                            
+                            bottom:'307px',
+                            animationName:'smallEyeAnimationHourglass',
+                            animationDuration:'2.8s',
+                            animationIterationCount:'10',
+                            animationTimingFunction:'linear'
+
+                        }}></div>
+                        <div class="Background" style={{
+                            transform:'rotate(44deg)',
+                            margin:'0 auto',
+                            bottom:'420px'
+                        }}></div>
                         
                     </div>
                 </div>
-                <div style={{margin:'0px auto 0px auto',fontSize:'16px',fontWeight:'bold',textAlign:'center'}}>
+                <div style={{margin:'0px auto 0px auto',fontSize:'16px',textAlign:'center'}}>
                     Мне надоело писать текст припашу витю
                 </div>
             </div>
@@ -583,31 +646,28 @@ class ExerciseScreen9 extends React.Component{
                         <div style={{
 
                             animationName:'nearAndFar1',
-                            animationDuration:'5s',
+                            animationDuration:'3s',
                             animationIterationCount:'10',
-                            opacity:'0',
+                            animationTimingFunction:'linear'   
 
-
-
-                            
-
-                        }}><img src="./1111.png" /></div>
+                        }}><img src="./background.svg" style={{height:'157px'}} /></div>
                         <div style={{
 
                             animationName:'nearAndFar2',
-                            animationDuration:'5s',
+                            animationDuration:'3s',
                             animationIterationCount:'10',
-                            opacity:'1',
-                            
+                    
                             position:'relative',
-                            bottom:'297px'
+                            bottom:'113px',
+                            left:'81px',
+                            animationTimingFunction:'linear'
 
 
-                        }}><img src="./2222.png" /></div>
+                        }}><img src="./hand.svg" style={{width:'125px'}} /></div>
                         
                     </div>
                 </div>
-                <div style={{margin:'100px auto 0px auto',fontSize:'16px',fontWeight:'bold',textAlign:'center'}}>
+                <div style={{margin:'auto 0px auto',fontSize:'16px',textAlign:'center'}}>
                     Протяните вашу  который стоит далеко от вас,<br />
                     теперь объекта на ладонь и наоборот
                 </div>
