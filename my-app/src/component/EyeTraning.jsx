@@ -152,6 +152,7 @@ class Timer extends React.Component {
       this.state = { 
           seconds: 1,
           screen: 0,
+          start: false,
           goBack: false,
         };
     }
@@ -193,7 +194,7 @@ class Timer extends React.Component {
       return (
         <div class='EyeTraningPage'>
             <div style={{margin:'35px auto 22px auto',fontSize:'20px', fontWeight:'bold'}}>Тренировка глаз</div>
-            <div style={{margin:'35px auto 55px auto',fontSize:'65px'}}>
+            <div class="timer"style={{margin:'35px auto 55px auto',fontSize:'65px'}}>
                 {this.state.screen === 0 || this.state.screen > 9? '' : this.state.seconds}
             </div>
         {
@@ -228,12 +229,13 @@ class StartScreen extends React.Component{
         this.setState({
             status: true
         })
+        document.getElementById("myBtn").disabled = true;
         this.props.onButtonClick()
     }
 
     render(){
         return(
-            <div style={{margin:"0 auto"}}>
+            <div style={{display:'flex', flexDirection:'column'}}>
                 <div style={{margin:'10px',textAlign:'center'}}>Рекомендации</div>
                 
                 <div style={{margin:'10px',textAlign:'center'}}>
@@ -261,8 +263,8 @@ class StartScreen extends React.Component{
                     Общее время упражнения: 3 минуты 25 секунд.
                 </div>
 
-                <div style={{margin:'70px 10px 10px 10px',textAlign:'center'}}>Больше не показывать</div>
-                <div onClick={this.onClick = this.onClick.bind(this)} 
+                <div style={{margin:'30px 10px 10px 10px',textAlign:'center'}}>Больше не показывать</div>
+                <button id='myBtn' onClick={this.onClick = this.onClick.bind(this)}
                     style={{
                         margin:'10px auto',
                         textAlign:'center',
@@ -270,12 +272,12 @@ class StartScreen extends React.Component{
                         height:'35px',
                         backgroundColor:"#6b6b6f",
                         borderRadius:'10px',
-                        }}>
-                    <div style={{padding:'8px'}}>
-                        Начать
-                    </div>
-                    
-                </div>
+                        border: 'none',
+                        font: 'inherit',
+                        color: 'inherit',
+                        
+                    }}>Начать
+                </button>
                 
             </div>
         )
