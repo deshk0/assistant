@@ -76,7 +76,7 @@ class MyProfileButton extends React.Component{
     render(){
         return(
             <div class = "SmallMenuButtom">
-                <img style={{width:'23px',margin:"auto",filter:'invert(1)'}} src="./Account.svg" alt="oпa" />
+                <img style={{width:'23px',margin:"auto",filter:'invert(1)'}} src="./account.svg" alt="oпa" />
             </div>
         )
     }
