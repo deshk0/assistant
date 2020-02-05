@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap&subset=cyrillic');
+
 
 
 @font-face {
@@ -345,6 +345,9 @@ body{
     width: 45px;
     background-color: var(--gray);
     border-radius: 100px;
+    display: flex;
+    justify-content: center;
+
 }
 
 
@@ -430,6 +433,22 @@ body{
     background-color: var(--black);
 
 }
+.TrajectoryDot{
+    width: 28px;
+    height: 28px;
+
+    position: relative;
+    bottom: 193px;
+    margin: 0 auto;
+    
+    animation-duration: 4s;
+    animation-iteration-count: 10;
+    
+    border-radius: 100px;
+    background-color: var(--EyeGradient);
+
+}
+
 
 .AcceptCircle{
     width: 70px;

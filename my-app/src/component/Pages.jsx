@@ -58,7 +58,7 @@ class EyeButton extends React.Component{
     render(){
         return(
             <div class = "BigMenuButtom">
-                <img style={{margin: "20px 18px"}} src="/Images/MenuButtons/EyeIcon.png" alt="oпa"  />
+                <img style={{width:'40px',margin:"auto",filter:'invert(1)'}} src="./eyeIcon.svg" alt="oпa" />
             </div>
         )
     }
@@ -67,7 +67,7 @@ class SettingsButton extends React.Component{
     render(){
         return(
             <div class = "SmallMenuButtom">
-                <img style={{margin: "12px 10px"}} src="/Images/MenuButtons/EyeIcon.png" alt="oпa" />
+                <img style={{width:'45px',margin:"auto",filter:'invert(1)'}} src="./Settings.svg" alt="oпa" />
             </div>
         )
     }
@@ -76,7 +76,7 @@ class MyProfileButton extends React.Component{
     render(){
         return(
             <div class = "SmallMenuButtom">
-                <img style={{margin: "12px 10px"}} src="/Images/MenuButtons/EyeIcon.png" alt="oпa" />
+                <img style={{width:'23px',margin:"auto",filter:'invert(1)'}} src="./Account.svg" alt="oпa" />
             </div>
         )
     }

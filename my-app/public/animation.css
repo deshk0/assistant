@@ -136,13 +136,10 @@
 }
 @keyframes eyeAnimationClose{
     0%{
-        background-color: transparent;
+        opacity: 0;
     }
-
     100%{
-        background-color: var(--EyeGradient);
-
-
+        opacity: 1;
     }
 }
 @keyframes eyeAnimationUpDown{
@@ -376,5 +373,52 @@
         bottom: 307px;
         left: 0px;
     }
+}
+
+@keyframes trajectoryDot{
+    0%{
+        bottom: 655px;
+        left: -2px;
+    }
+    10%{
+        bottom: 699px;
+        left: -71px;
+    }
+    20%{
+        bottom: 655px;
+        left: -120px;
+    }
+    30%{
+        bottom: 620px;
+        left: -105px;
+    }
+    40%{
+        bottom: 606px;
+        left: -71px;
+    }
+    50%{
+        bottom: 655px;
+        left: -2px;
+    } 
+    60%{
+        bottom: 699px;
+        left: 67px;
+    } 
+    70%{
+        bottom: 655px;
+        left: 116px;
+    } 
+    80%{
+        bottom: 620px;
+        left: 101px;
+    } 
+    90%{
+        bottom: 606px;
+        left: 67spx;
+    } 
+    100%{
+        bottom: 655px;
+        left: -2px;
+    } 
 }
 

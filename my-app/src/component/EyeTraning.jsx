@@ -308,21 +308,23 @@ class ExerciseScreen1 extends React.Component{
                             left:'5px',
 
                         }}></div> 
-                        <div class="ClosedEye2" style={{
-                            
+                       
+                       <img src="./EyeBlue.svg" style={{
                             animationName:'eyeAnimationClose',
                             animationDuration:'0.1s',
                             animationTimingFunction:'ease-in-out',
                             animationIterationCount:'1',
                             animationDelay:'0.5s',
                             animationFillMode:'backwards',
+
                             
+
+                            height:'300px',
+                            width:'300px',
                             position:'relative',
-                            bottom:'413px',
-                            left:'58px',
-                            
-                        }}>
-                       </div> 
+                            bottom:'485px'
+
+                        }}/>
                     </div>
                 </div>
                 <div style={{margin:'0px auto 0px auto',fontSize:'16px',}}>
@@ -581,10 +583,23 @@ class ExerciseScreen7 extends React.Component{
                             margin:'0 auto',
                             bottom:'420px'
                         }}></div>
+                        <img src="./Infinity.svg" style={{height:'300px', width:'300px',position:'relative',bottom:'495px'}} />
+                        <div class="TrajectoryDot" style={{
+                            
+                            bottom:'655px',
+                            left:'-2px',
+                            animationName:'trajectoryDot',
+                            animationDuration:'3s',
+                            animationIterationCount:'1000',
+                            animationTimingFunction:'linear'
+
+                        }}></div>
+
                     </div>
                 </div>
                 <div style={{margin:'0px auto 0px auto',fontSize:'16px',textAlign:'center'}}>
-                    Пусть витя текст напишет, мне в падлу
+                    Рисуйте перед собой перевернутую восьмерку,
+                    <br/> или знак бесконечности.
                 </div>
             </div>
         )
@@ -596,7 +611,7 @@ class ExerciseScreen8 extends React.Component{
         return(
             <div class='EyeTraningPage'>
                 <div style={{margin:'0px auto 0px auto',fontSize:'16px',fontWeight:'bold'}}>
-                    Ходики
+                    Диагонали
                 </div>
                 <div style={{margin:'0px auto'}}>
                     <div class="Eye">
@@ -625,11 +640,14 @@ class ExerciseScreen8 extends React.Component{
                             margin:'0 auto',
                             bottom:'420px'
                         }}></div>
-                        
                     </div>
                 </div>
+
                 <div style={{margin:'0px auto 0px auto',fontSize:'16px',textAlign:'center'}}>
-                    Мне надоело писать текст припашу витю
+                    Посмотрите в верхний левый угол, затем в левый нижний
+                    теперь в правый верхний и в правый нижний
+                    <br />и снова повторяйте траекторию 
+                    
                 </div>
             </div>
         )
@@ -670,8 +688,9 @@ class ExerciseScreen9 extends React.Component{
                     </div>
                 </div>
                 <div style={{margin:'auto 0px auto',fontSize:'16px',textAlign:'center'}}>
-                    Протяните вашу  который стоит далеко от вас,<br />
-                    теперь объекта на ладонь и наоборот
+                    Протяните перед собой руку 
+                    <br />сфокусируйте взгляд на ней,
+                    а теперь переводите взгляд на предмет вдали и обратно.
                 </div>
             </div>
         )
@@ -704,11 +723,7 @@ class FinalScreen extends React.Component{
                     Тренировка завершена
                 </div>
                 <div style={{margin:'0px auto'}}>
-                    <div class="AcceptCircle">
-                        <div class="AcceptCheck">
-                            <div class="AcceptCheck1"></div>
-                        </div>
-                    </div>
+                    <img src="./right.svg" alt='Sosi' style={{width:'105px',margin:'50px 0', filter:'invert(1)'}} />
                 </div>
                 <div style={{margin:'0px auto 0px auto',fontSize:'16px',fontWeight:'thin',textAlign:'center', width:'250px',height:'35px',backgroundColor:"#6b6b6f",borderRadius:'50px'}}>
                     <div onClick={this.onClick = this.onClick.bind(this)} style={{margin:' 9px'}}>Вернуться на главную</div>
