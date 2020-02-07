@@ -151,7 +151,7 @@ class Timer extends React.Component {
       
       this.state = { 
           seconds: 1,
-          screen: 0,
+          screen:  0,
           start: false,
           goBack: false,
         };
