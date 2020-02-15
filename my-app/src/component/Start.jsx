@@ -33,11 +33,9 @@ export class Start extends React.Component{
             method: 'POST',
             headers:{
                 'Content-type': 'application/json',
-                'secret-key': SECRET_KEY,
-                'name': `${login}`
             },
             body: JSON.stringify({
-                name: login,
+                email: login,
                 password: password
             })
     
